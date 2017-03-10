@@ -4,10 +4,13 @@
 
     public class ListItem : Label
     {
-        // Can be modified to contain reference to Entity data
-        public ListItem(int x, int y, int w, string content)
+        private int refId;
+        public ListItem(int x, int y, int w, string content, int refId)
             : base(x, y, w, content)
         {
+            this.refId = refId;
         }
+
+        public int RefId { get { return this.refId; } }
     }
 }

@@ -17,6 +17,11 @@
             this.content.Add(line);
         }
 
+        public void Clear()
+        {
+            this.content.Clear();
+        }
+
         protected override void Render()
         {
             foreach (var line in content)

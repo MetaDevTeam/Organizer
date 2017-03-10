@@ -15,7 +15,6 @@
             this.contacts = list;
             this.Init();
             this.details = new Paragraph(12, 1);
-            this.details.AddLine("Details pane");
         }
 
         private void Init()
@@ -35,6 +34,20 @@
         public void MoveDown()
         {
             this.contacts.MoveDown();
+        }
+
+        public int GetSelected()
+        {
+            return this.contacts.GetSelected();
+        }
+
+        public void SetDetails(string[] details)
+        {
+            this.details.Clear();
+            foreach (var line in details)
+            {
+                this.details.AddLine(line);
+            }
         }
 
         public override void SetBackgroundColor(ConsoleColor color)

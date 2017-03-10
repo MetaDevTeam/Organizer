@@ -58,17 +58,17 @@
             this.layout.SetLayout(Composer.Compose(matrix));
         }
 
-        public void AddItem(string item)
+        public void AddItem(string item, int refId)
         {
-            var listItem = new ListItem(1, 1, this.width - 2, item);
+            var listItem = new ListItem(1, 1, this.width - 2, item, refId);
             listItem.SetBackgroundColor(this.backgroundColor);
             listItem.SetForegroundColor(this.foregroundColor);
             this.content.Add(this.content.Count, listItem);
         }
 
-        public ListItem GetSelected()
+        public int GetSelected()
         {
-            return this.content[this.offset + this.selected];
+            return this.content[this.offset + this.selected].RefId;
         }
 
         public override void SetBackgroundColor(ConsoleColor color)

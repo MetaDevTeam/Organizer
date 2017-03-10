@@ -49,17 +49,17 @@
             }
         }
 
-        public void AddItem(string item)
+        public void AddItem(string item, int refId)
         {
-            var listItem = new ListItem(0, 0, this.width - 1, item);
+            var listItem = new ListItem(0, 0, this.width - 1, item, refId);
             listItem.SetBackgroundColor(this.backgroundColor);
             listItem.SetForegroundColor(this.foregroundColor);
             this.content.Add(this.content.Count, listItem);
         }
 
-        public ListItem GetSelected()
+        public int GetSelected()
         {
-            return this.content[this.offset + this.selected];
+            return this.content[this.offset + this.selected].RefId;
         }
 
         public override void SetBackgroundColor(ConsoleColor color)

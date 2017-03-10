@@ -15,7 +15,7 @@
             var listBox = new ScrollList(1, 1, 11, 9);
             foreach (var person in context.People.ToList())
             {
-                listBox.AddItem(person.FirstName + " " + person.LastName);
+                listBox.AddItem(person.FirstName + " " + person.LastName, person.Id);
             }
 
             this.root = new ContactsList(0, 0, listBox);
@@ -31,7 +31,17 @@
         {
             while (true)
             {
-                //System.Console.Clear();
+                int refId = ((ContactsList)this.root).GetSelected();
+                var current = context.People.Find(refId);
+
+                string[] details = new string[]
+                {
+                    $"First name: {current.FirstName}",
+                    $"Last name:  {current.LastName}",
+                    //$"Email:      {current.Emails.FirstOrDefault().Text}",
+                };
+                ((ContactsList)this.root).SetDetails(details);
+
                 this.Print();
                 var command = this.parser.Listen();
                 switch (command)
