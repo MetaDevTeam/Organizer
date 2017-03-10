@@ -51,6 +51,8 @@
     <Compile Include="Enumerations\Command.cs" />
     <Compile Include="Input\KeyboardInput.cs" />
     <Compile Include="Organizer.cs" />
+    <Compile Include="ScreenElements\Composite\ContactsList.cs" />
+    <Compile Include="ScreenElements\Composite\Paragraph.cs" />
     <Compile Include="ScreenElements\Composite\ScrollList.cs" />
     <Compile Include="ScreenElements\Composite\ListBox.cs" />
     <Compile Include="ScreenElements\Composite\TextBox.cs" />

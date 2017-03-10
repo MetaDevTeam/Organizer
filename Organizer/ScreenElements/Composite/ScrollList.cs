@@ -9,7 +9,6 @@
     {
         private int width;
         private int height;
-        private Layout layout;
         private Dictionary<int, ListItem> content;
         private int selected;
         private int offset;
@@ -21,7 +20,6 @@
         {
             this.width = w;
             this.height = h;
-            this.Init();
             this.content = new Dictionary<int, ListItem>();
             this.selected = 0;
             this.offset = 0;
@@ -51,17 +49,6 @@
             }
         }
 
-        private void Init()
-        {
-            this.layout = new Layout(0, 0);
-            var matrix = new string[this.height];
-            for (int i = 0; i < matrix.Length; i++)
-            {
-                matrix[i] = new string(' ', this.width);
-            }
-            this.layout.SetLayout(matrix);
-        }
-
         public void AddItem(string item)
         {
             var listItem = new ListItem(0, 0, this.width - 1, item);
@@ -78,7 +65,6 @@
         public override void SetBackgroundColor(ConsoleColor color)
         {
             base.SetBackgroundColor(color);
-            this.layout.SetBackgroundColor(color);
             foreach (var item in this.content.Values)
             {
                 item.SetBackgroundColor(color);
@@ -88,7 +74,6 @@
         public override void SetForegroundColor(ConsoleColor color)
         {
             base.SetForegroundColor(color);
-            this.layout.SetForegroundColor(color);
             foreach (var item in this.content.Values)
             {
                 item.SetForegroundColor(color);
@@ -97,7 +82,6 @@
 
         protected override void Render()
         {
-            this.layout.Print();
             int current = this.offset + this.selected;
 
             if (this.content.Count > this.height)

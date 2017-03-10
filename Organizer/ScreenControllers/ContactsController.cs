@@ -24,7 +24,7 @@
             listBox.AddItem("Grigor");
             listBox.AddItem("Kalin");
 
-            this.root = listBox;
+            this.root = new ContactsList(0, 0, listBox);
         }
 
         private void OpenDetails(ScreenElement target)
@@ -43,13 +43,13 @@
                 switch (command)
                 {
                     case Command.MoveUp:
-                        ((ScrollList)root).MoveUp();
+                        ((ContactsList)root).MoveUp();
                         break;
                     case Command.MoveDown:
-                        ((ScrollList)root).MoveDown();
+                        ((ContactsList)root).MoveDown();
                         break;
                     case Command.Execute:
-                        this.OpenDetails(((ScrollList)this.root).GetSelected());
+                        //this.OpenDetails(((ContactsList)this.root).GetSelected());
                         break;
                     case Command.Back:
                         return;
