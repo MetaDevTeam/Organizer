@@ -1,5 +1,6 @@
 ﻿namespace Organizer
 {
+    using Data;
     using Input;
     using ScreenControllers;
 
@@ -8,7 +9,7 @@
         private KeyboardInput kbInput;
         private HomeScreenController homeScreen;
 
-        public Organizer()
+        public Organizer(OrganizerEntities context)
         {
             this.kbInput = new KeyboardInput();
             this.homeScreen = new HomeScreenController(this.kbInput);

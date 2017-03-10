@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{25CA1CDC-40F1-49CE-AC25-88ED627D7AE1}</ProjectGuid>
+    <ProjectGuid>{6CC9AEF3-48B3-48EF-8BED-88A92E4A00FF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Organizer.Data</RootNamespace>
-    <AssemblyName>Organizer.Data</AssemblyName>
+    <RootNamespace>Organizer.Models</RootNamespace>
+    <AssemblyName>Organizer.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,8 +41,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,12 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201703101645322_InitialCreate.cs" />
-    <Compile Include="Migrations\201703101645322_InitialCreate.Designer.cs">
-      <DependentUpon>201703101645322_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="OrganizerEntities.cs" />
+    <Compile Include="Contacts\Email.cs" />
+    <Compile Include="Contacts\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,15 +58,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Organizer.Models\Organizer.Models.csproj">
-      <Project>{6cc9aef3-48b3-48ef-8bed-88a92e4a00ff}</Project>
-      <Name>Organizer.Models</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703101645322_InitialCreate.resx">
-      <DependentUpon>201703101645322_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="Callendar\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

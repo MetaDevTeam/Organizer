@@ -1,5 +1,7 @@
 namespace Organizer.Data
 {
+    using Migrations;
+    using Models.Contacts;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -7,10 +9,12 @@ namespace Organizer.Data
     public class OrganizerEntities : DbContext
     {
         public OrganizerEntities()
-            : base("name=OrganizerEntities")
+            : base("OrganizerEntities")
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<OrganizerEntities, Configuration>());
         }
 
-        // public virtual DbSet<MyEntity> MyEntities { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Email> Emails { get; set; }
     }
 }
