@@ -16,19 +16,72 @@ namespace Organizer.Data.Migrations
 
         protected override void Seed(Organizer.Data.OrganizerEntities context)
         {
-            var guy1 = new Person()
-            {
-                FirstName = "Ivan",
-                LastName = "Ivanov"
-            };
-
-            var guy2 = new Person()
-            {
-                FirstName = "Pesho",
-                LastName = "Petrov"
-            };
-
-            context.People.AddOrUpdate(p => new { p.FirstName, p.LastName }, guy1, guy2);
+            context.People.AddOrUpdate(p => new { p.FirstName, p.LastName },
+                new Person()
+                {
+                    FirstName = "Ivan",
+                    LastName = "Ivanov"
+                },
+                new Person()
+                {
+                    FirstName = "Pesho",
+                    LastName = "Petrov"
+                },
+                new Person()
+                {
+                    FirstName = "Georgi",
+                    LastName = "Georgiev"
+                },
+                new Person()
+                {
+                    FirstName = "Grigor",
+                    LastName = "Grigorov"
+                },
+                new Person()
+                {
+                    FirstName = "Petkan",
+                    LastName = "Petkanov"
+                },
+                new Person()
+                {
+                    FirstName = "Katya",
+                    LastName = "Kadieva"
+                },
+                new Person()
+                {
+                    FirstName = "Asen",
+                    LastName = "Asenov"
+                },
+                new Person()
+                {
+                    FirstName = "Kosta",
+                    LastName = "Kostov"
+                },
+                new Person()
+                {
+                    FirstName = "Anton",
+                    LastName = "Antonov"
+                },
+                new Person()
+                {
+                    FirstName = "Iliya",
+                    LastName = "Iliev"
+                },
+                new Person()
+                {
+                    FirstName = "Maria",
+                    LastName = "Ivanova"
+                },
+                new Person()
+                {
+                    FirstName = "Stanka",
+                    LastName = "Krasimirova"
+                },
+                new Person()
+                {
+                    FirstName = "Ognyqn",
+                    LastName = "Ognyanov"
+                });
         }
     }
 }

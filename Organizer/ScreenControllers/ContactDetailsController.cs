@@ -1,13 +1,14 @@
 ﻿namespace Organizer.ScreenControllers
 {
+    using Data;
     using Enumerations;
     using Input;
     using ScreenElements;
 
     public class ContactDetailsController : ScreenController
     {
-        public ContactDetailsController(ScreenElement root, KeyboardInput parser)
-            : base(root, parser)
+        public ContactDetailsController(ScreenElement root, KeyboardInput parser, OrganizerEntities context)
+            : base(root, parser, context)
         {
         }
 

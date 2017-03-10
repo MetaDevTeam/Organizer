@@ -1,35 +1,29 @@
 ﻿namespace Organizer.ScreenControllers
 {
+    using Data;
     using Enumerations;
     using Input;
     using ScreenElements;
     using ScreenElements.Composite;
+    using System.Linq;
 
     public class ContactsController : ScreenController
     {
-        public ContactsController(KeyboardInput parser)
-            : base(parser)
+        public ContactsController(KeyboardInput parser, OrganizerEntities context)
+            : base(parser, context)
         {
             var listBox = new ScrollList(1, 1, 11, 9);
-            listBox.AddItem("Pesho");
-            listBox.AddItem("Gosho");
-            listBox.AddItem("Ivan");
-            listBox.AddItem("Dragan");
-            listBox.AddItem("Petkan");
-            listBox.AddItem("Georgi");
-            listBox.AddItem("Atanas");
-            listBox.AddItem("Ivaylo");
-            listBox.AddItem("Vladimir");
-            listBox.AddItem("Stoyan");
-            listBox.AddItem("Grigor");
-            listBox.AddItem("Kalin");
+            foreach (var person in context.People.ToList())
+            {
+                listBox.AddItem(person.FirstName + " " + person.LastName);
+            }
 
             this.root = new ContactsList(0, 0, listBox);
         }
 
         private void OpenDetails(ScreenElement target)
         {
-            var details = new ContactDetailsController(new TextBox(5, 5, 15, 3, "contact details"), parser);
+            var details = new ContactDetailsController(new TextBox(5, 5, 15, 3, "contact details"), parser, context);
             details.BeginParse();
         }
 

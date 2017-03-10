@@ -1,15 +1,15 @@
 ﻿namespace Organizer.ScreenControllers
 {
+    using Data;
     using Enumerations;
     using Input;
     using ScreenElements;
-    using ScreenElements.Composite;
     using Utility;
 
     public class HomeScreenController : ScreenController
     {
-        public HomeScreenController(KeyboardInput parser)
-            : base(parser)
+        public HomeScreenController(KeyboardInput parser, OrganizerEntities context)
+            : base(parser, context)
         {
             var matrix = Composer.MakeBoxLayout(49, 16);
             Composer.AddHorizontalLine(matrix, 10, 0, 48);
@@ -21,7 +21,7 @@
 
         public void OpenContactList()
         {
-            var contacts = new ContactsController(this.parser);
+            var contacts = new ContactsController(this.parser, this.context);
             contacts.BeginParse();
         }
 

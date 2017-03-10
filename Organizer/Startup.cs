@@ -4,7 +4,7 @@
     using ScreenElements;
     using System;
 
-    class Startup
+    public class Startup
     {
         static void Main()
         {
