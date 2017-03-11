@@ -7,14 +7,14 @@
     {
         private Layout layout;
         private ScrollList contacts;
-        private Paragraph details;
+        private Grid details;
 
         public ContactsList(int x, int y, ScrollList list)
             : base(x, y)
         {
             this.contacts = list;
             this.Init();
-            this.details = new Paragraph(12, 1);
+            this.details = new Grid(12, 1);
         }
 
         private void Init()
@@ -44,10 +44,11 @@
         public void SetDetails(string[] details)
         {
             this.details.Clear();
-            foreach (var line in details)
-            {
-                this.details.AddLine(line);
-            }
+
+            this.details.AddItem(0, 0, content: "First name:");
+            this.details.AddItem(12, 0, content: details[0]);
+            this.details.AddItem(0, 2, content: "Last name:");
+            this.details.AddItem(12, 2, content: details[1]);
         }
 
         public override void SetBackgroundColor(ConsoleColor color)

@@ -3,6 +3,7 @@
     using Data;
     using Enumerations;
     using Input;
+    using Models.Contacts;
     using ScreenElements;
     using ScreenElements.Composite;
     using System.Linq;
@@ -21,9 +22,9 @@
             this.root = new ContactsList(0, 0, listBox);
         }
 
-        private void OpenDetails(ScreenElement target)
+        private void OpenDetails(Person Contact)
         {
-            var details = new ContactDetailsController(new TextBox(5, 5, 15, 3, "contact details"), parser, context);
+            var details = new ContactDetailsController(parser, context, Contact);
             details.BeginParse();
         }
 
@@ -36,8 +37,8 @@
 
                 string[] details = new string[]
                 {
-                    $"First name: {current.FirstName}",
-                    $"Last name:  {current.LastName}",
+                    current.FirstName,
+                    current.LastName,
                     //$"Email:      {current.Emails.FirstOrDefault().Text}",
                 };
                 ((ContactsList)this.root).SetDetails(details);
@@ -53,7 +54,7 @@
                         ((ContactsList)root).MoveDown();
                         break;
                     case Command.Execute:
-                        //this.OpenDetails(((ContactsList)this.root).GetSelected());
+                        this.OpenDetails(current);
                         break;
                     case Command.Back:
                         return;

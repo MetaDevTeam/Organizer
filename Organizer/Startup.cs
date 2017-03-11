@@ -1,6 +1,7 @@
 ﻿namespace Organizer
 {
     using Data;
+    using Enumerations;
     using ScreenElements;
     using System;
 
@@ -22,7 +23,7 @@
 
             // Establish DB connection
             var context = new OrganizerEntities();
-            context.Database.Initialize(true);
+            //context.Database.Initialize(true);
 
             // Hide cursor after initialization is completed
             Console.CursorVisible = false;
