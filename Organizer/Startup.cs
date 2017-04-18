@@ -1,7 +1,6 @@
 ﻿namespace Organizer
 {
     using Data;
-    using Enumerations;
     using ScreenElements;
     using System;
 
@@ -10,10 +9,10 @@
         static void Main()
         {
             // Setup screen
-            Console.WindowWidth = 50;
-            Console.WindowHeight = 17;
-            Console.BufferWidth = 50;
-            Console.BufferHeight = 17;
+            //Console.WindowWidth = 50;
+            //Console.WindowHeight = 17;
+            //Console.BufferWidth = 50;
+            //Console.BufferHeight = 17;
 
             // Setup element style
             ScreenElement.DefaultBGColor = ConsoleColor.Blue;
@@ -23,7 +22,7 @@
 
             // Establish DB connection
             var context = new OrganizerEntities();
-            //context.Database.Initialize(true);
+            context.Database.Initialize(true);
 
             // Hide cursor after initialization is completed
             Console.CursorVisible = false;

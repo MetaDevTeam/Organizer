@@ -12,6 +12,7 @@ namespace Organizer.Data
             : base("OrganizerEntities")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<OrganizerEntities, Configuration>());
+            //Database.Initialize(true);
         }
 
         public virtual DbSet<Person> People { get; set; }

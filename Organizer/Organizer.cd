@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Organizer.Input.KeyboardInput" Collapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Input\KeyboardInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.EditBox">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAQAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ScreenElements\EditBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Label">
+    <Position X="5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ScreenElements\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Layout">
+    <Position X="14" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAABAACAAAAAA=</HashCode>
+      <FileName>ScreenElements\Layout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.ListItem">
+    <Position X="5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScreenElements\ListItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.MenuItem">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>ScreenElements\MenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.ScreenElement">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQACAAAAIEACAAACAAAAAAAAAAAAgAAhBgAAAEYAA=</HashCode>
+      <FileName>ScreenElements\ScreenElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Composite.ContactsList">
+    <Position X="2.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAQAAAIAAAAIASAAAAAAAAAAAAAAQBACCAAAAAA=</HashCode>
+      <FileName>ScreenElements\Composite\ContactsList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Composite.Grid">
+    <Position X="16.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAgAAAAAAAABAAAABAAAA=</HashCode>
+      <FileName>ScreenElements\Composite\Grid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Composite.ListBox">
+    <Position X="20.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAGCAAAAAAIAAAQIQCAAAAAAgAAAAAAAQBACCgAAAAA=</HashCode>
+      <FileName>ScreenElements\Composite\ListBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Composite.Menu">
+    <Position X="7.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAIAAgAAAAAgAAAAAAAQBAAAgAAAAA=</HashCode>
+      <FileName>ScreenElements\Composite\Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Composite.Paragraph">
+    <Position X="18.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAABAAAA=</HashCode>
+      <FileName>ScreenElements\Composite\Paragraph.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Composite.ScrollList">
+    <Position X="23.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAGCAAAAAAIAAAQIQCAAAAAAgAAAAAAAQBAAAgAAAAA=</HashCode>
+      <FileName>ScreenElements\Composite\ScrollList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenElements.Composite.TextBox">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAABAAACAAAAAAAAAAAAAAABACCAAAAAA=</HashCode>
+      <FileName>ScreenElements\Composite\TextBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenControllers.ContactDetailsController">
+    <Position X="8.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ScreenControllers\ContactDetailsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenControllers.ContactsController">
+    <Position X="13.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScreenControllers\ContactsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenControllers.EditBoxController">
+    <Position X="15.75" Y="12.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScreenControllers\EditBoxController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenControllers.HomeScreenController">
+    <Position X="11" Y="12.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScreenControllers\HomeScreenController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Organizer.ScreenControllers.ScreenController">
+    <Position X="12.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAEIAA=</HashCode>
+      <FileName>ScreenControllers\ScreenController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Organizer.Enumerations.Command" Collapsed="true">
+    <Position X="26" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAAAAAAAAAAAQAAAAAAAAAAAAAABAIQAAAAAAAABA=</HashCode>
+      <FileName>Enumerations\Command.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Organizer.Enumerations.UserResponse" Collapsed="true">
+    <Position X="27.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Enumerations\UserResponse.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

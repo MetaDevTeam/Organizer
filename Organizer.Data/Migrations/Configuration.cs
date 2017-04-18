@@ -1,16 +1,16 @@
 namespace Organizer.Data.Migrations
 {
-    using Models.Contacts;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using Models.Contacts;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Organizer.Data.OrganizerEntities>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Organizer.Data.OrganizerEntities";
         }
 
